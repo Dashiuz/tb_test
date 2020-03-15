@@ -1,15 +1,18 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
+const cors = require("cors");
 
 const port = process.env.PORT || 4000;
 const base_URL = '/api';
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(cors());
 
 app.route(`${base_URL}/sendString`).post(function (req, res) {
   let strValue = req.body.strValue;
+  console.log("strValue: " + strValue);
   if (strValue) {
     res.send({ status: 200, message: "OK", data: strValue })
   } else {
