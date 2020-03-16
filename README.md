@@ -1,7 +1,15 @@
 ## How to run the Projects
 
+As usual it's necesary to install the packages of each project:
+
+Go to the Server side project folder **~/tb_test/server** and execute: `npm install` then,
+switch to the Client side project folder **~/tb_test/client** and execute: `npm install` one more time.
+
+Once all dependencies has been installed the project is ready to go.
+
 Go to the folder **~/tb_test/server** and execute:
- `npm run dev`
+
+                  `npm run dev`
  
 In that way it will run the the client project and the server project also, due to Nodemon. 
 
